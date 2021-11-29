@@ -11,6 +11,7 @@ This project was built on an older System76 desktop running Ubuntu 20.04 repurpo
 
 - Operational knowledge of [Docker](https://www.docker.com/)
 - Operational knowledge of the [NiceHash Equihash Miner](https://github.com/nicehash/nheqminer)
+- Operational knowledge of [NiceHash stratum servers](https://www.nicehash.com/support/mining-help/mining-advanced-topics/which-stratum-servers-are-available)
 
 ### Technical Requirements
 
@@ -54,11 +55,25 @@ docker build -t nheqminer_cpu .
 
 The following instructions provide steps to start a docker container which automatically starts the mining process.
 
-1. **Run Docker container** using the following command.
+1. **Run Docker container** using one of the following commands. This executes the Docker container and tails the output.
 
+**CPU-only (no GPU acceleration):**
 ```bash
 nvidia-docker run --gpus all -ti --rm nheqminer -l equihash.usa.nicehash.com:3357 -u BTC_WALLET_ADDRESS_HERE.worker1
 ```
+
+- Replace **BTC_WALLET_ADDRESS_HERE** with your [NiceHash mining address](https://www.nicehash.com/my/mining/rigs).
+- Name your mining rig by replacing `worker1` with an appropriate name.
+
+**CPU and GPU acceleration:**
+```bash
+nvidia-docker run --gpus all -ti --rm nheqminer -l equihash.usa.nicehash.com:3357 -u BTC_WALLET_ADDRESS_HERE.worker1 -t 6 -cd 0 1
+```
+
+- Adjust the numeric parameter after `t` to reflect the number of threads executed
+- Adjust the `0 1` parameter to reflect the number of GPU cores available
+
+See [NiceHash nheqminer README](https://github.com/nicehash/nheqminer/blob/master/README.md#run-instructions) for additional information on command parameters.
 
 ## Reference
 
