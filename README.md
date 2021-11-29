@@ -3,6 +3,14 @@ Bitcoin mining using the [NiceHash equihash mining algorithm](https://github.com
 
 ## Table of Contents
 
+- [Background](#background)
+- [Prerequisites](#prerequisites)
+	- [Technical Requirements](#technical-requirements)
+- [Build nheqminer Docker Image](#build-nheqminer-docker-image)
+- [Start Mining Process](#start-mining-process)
+- [Reference](#reference)
+- [Author Contact](#author-contact)
+
 ## Background
 
 This project was built on an older System76 desktop running Ubuntu 20.04 repurposed for Bitcoin mining. This approach is definitely not the best.  Current mining technology such as [ASIC miners](https://www.investopedia.com/terms/a/asic.asp) are far more profitable and efficient.
