@@ -49,13 +49,11 @@ Build nheqminer Docker image **without GPU acceleration:**
 ```bash
 cd cpu
 docker build -t nheqminer_cpu .
-```  
+```
 
 ## Start Mining Process
 
-The following instructions provide steps to start a docker container which automatically starts the mining process.
-
-1. **Run Docker container** using one of the following commands. This executes the Docker container and tails the output.
+Run the appropriate Docker container using one of the following commands. This executes the Docker container and tails the output.  Starting the Docker container automatically starts the mining process.
 
 **CPU-only (no GPU acceleration):**
 ```bash
