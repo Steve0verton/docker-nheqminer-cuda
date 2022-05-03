@@ -38,11 +38,13 @@ The following instructions provide steps to build the Docker image.
 
 2. **Clone this project** to get necessary Dockerfile. Start from a local working directory where code is managed for development purposes such as a parent development directory `~/dev/`.
 
+Clone this repo:
 ```bash
-# clone this repo
-git clone https://github.com/Steve0verton/docker-nheqminer-cuda
+git clone https://github.com/Steve0verton/docker-nheqminer-cuda.git
+```
 
-# move to the project directory
+Move to the project directory:
+```bash
 cd docker-nheqminer-cuda
 ```
 
