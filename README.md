@@ -57,10 +57,9 @@ docker build -t nheqminer .
 
 Build nheqminer Docker image **without GPU acceleration:**
 ```bash
+# Switch to specific directory with CPU only Dockerfile 
 cd cpu
-```
-
-```bash
+# Build docker image
 docker build -t nheqminer_cpu .
 ```
 
